@@ -101,7 +101,7 @@ int16_t read(uint8_t addy){
   //tell mpu6050 to read the address specified in function call
   Wire.write(addy);
 
-  //
+  //send a repeated start condition to keep transmission open
   Wire.endTransmission(false);
 
   //arduino request 16 bits or 2 bytes from mpu6050 
